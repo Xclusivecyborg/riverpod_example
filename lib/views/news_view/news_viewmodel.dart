@@ -11,7 +11,7 @@ class NewsViewModel extends StateNotifier<NewsViewState> {
   Future<void> getNews() async {
     try {
       final response = await _network.getNews();
-      state = state.update(
+      state = state.updateState(
         isLoading: false,
         news: response,
       );
@@ -23,6 +23,6 @@ class NewsViewModel extends StateNotifier<NewsViewState> {
   }
 
   void upDateChecked(bool val) {
-    state = state.update(isChecked: val);
+    state = state.updateState(isChecked: val);
   }
 }

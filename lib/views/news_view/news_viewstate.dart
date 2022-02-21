@@ -5,13 +5,15 @@ class NewsViewState {
   final List<NewsModel> news;
   bool isChecked;
 
-  NewsViewState({required this.news, this.isChecked = false, this.isLoading = true});
+  NewsViewState(
+      {required this.news, this.isChecked = false, this.isLoading = true});
 
-  NewsViewState update({bool? isLoading, bool? isChecked, List<NewsModel>? news}) {
+  NewsViewState updateState(
+      {bool? isLoading, bool? isChecked, List<NewsModel>? news}) {
     return NewsViewState(
-        isLoading: isLoading ?? this.isLoading, 
-        news: news ?? this.news,
-        isChecked: isChecked ?? this.isChecked,
-        );
+      isLoading: isLoading ?? this.isLoading,
+      news: news ?? this.news,
+      isChecked: isChecked ?? this.isChecked,
+    );
   }
 }

@@ -11,6 +11,7 @@ class NewsModel {
       author: json['author'] ?? '',
       content: json['content'] ?? '',
       title: json['title'] ?? '',
+      
       url: json['urlToImage'] ?? '',
     );
   }
